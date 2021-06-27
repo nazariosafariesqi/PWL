@@ -35,12 +35,14 @@
     </div>
   </label>
   <button type="submit">LogIn</button>
-</form>
-
-
-<p ><a href="#" >Forgot Password ?</a></p>	
+  <br><br>
+  <p ><a href="#" ><small>Forgot Password ?</small></a></p>	
 		
 		<div class="form-item">
 		<p class="pull-left"><a href="{{url('register')}}"><small>Register</small></a></p>
-        </div>
+    </div>
+</form>
+
+
+
 		

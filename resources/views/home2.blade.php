@@ -32,10 +32,16 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#novel">Novel</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#game">Game</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Pembelian</a></li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                    <button type = "submit" class="nav-link js-scroll-trigger"  >Logout </a>
-                    </form>
+                    
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                        </a>
+                        </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        </form>
                 </ul>
             </div>
         </div>
@@ -235,7 +241,7 @@
                             <h4 class="text-uppercase m-0">X-BOX</h4>
                             <hr class="my-4" />
                             <div class="small text-black-50">
-                                <a href="#!">Beli Sekarang!</a>
+                                <a href="{{url('produk')}}">Beli Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -247,7 +253,7 @@
                             <h4 class="text-uppercase m-0">Playstation</h4>
                             <hr class="my-4" />
                             <div class="small text-black-50">
-                                <a href="#!">Beli Sekarang!</a>
+                                <a href="{{url('produk')}}">Beli Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -259,7 +265,7 @@
                             <h4 class="text-uppercase m-0">PC</h4>
                             <hr class="my-4" />
                             <div class="small text-black-50">
-                                <a href="#!">Beli Sekarang!</a>
+                                <a href="{{url('produk')}}">Beli Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -284,5 +290,4 @@
     <!-- Core theme JS-->
     <script src="js/landingPage.js"></script>
 </body>
-
 </html>
